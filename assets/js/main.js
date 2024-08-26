@@ -169,7 +169,6 @@
 
 //Carousel
 
-
 const wiperTrack = document.querySelector(".wiper-track");
 const wipes = Array.from(wiperTrack.children);
 const wipePrevBtn = document.querySelector(".wiper-button__right");
@@ -181,6 +180,8 @@ const updateDimensions = () => {
   return { wipeWidth, wrapperWidth };
 };
 
+//NOTE: We do not want to hide the arrows if we are scrolling
+/*
 const arrowsBehaviour = (wipePrevBtn, wipeNextBtn, index) => {
   if (index === 0) {
     wipePrevBtn.classList.add("is-hidden");
@@ -193,6 +194,7 @@ const arrowsBehaviour = (wipePrevBtn, wipeNextBtn, index) => {
     wipeNextBtn.classList.remove("is-hidden");
   }
 };
+*/
 
 const wipeSlide = (activeSlide, nextSlide, targetIndex) => {
   const { wipeWidth, wrapperWidth } = updateDimensions();
@@ -224,7 +226,10 @@ wipeNextBtn.addEventListener("click", () => {
   if (nextSlide) {
     const targetIndex = wipes.findIndex((slide) => slide === nextSlide);
     wipeSlide(activeSlide, nextSlide, targetIndex);
-    arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
+//    arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
+  }
+  else {
+    wipeSlide(activeSlide, wipes[0], 0);
   }
 });
 
@@ -235,7 +240,10 @@ wipePrevBtn.addEventListener("click", () => {
   if (prevSlide) {
     const targetIndex = wipes.findIndex((slide) => slide === prevSlide);
     wipeSlide(activeSlide, prevSlide, targetIndex);
-    arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
+ //   arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
+  }
+  else {
+    wipeSlide(activeSlide, wipes[wipes.length - 1], wipes.length - 1);
   }
 });
 
@@ -245,7 +253,7 @@ const initializeCarousel = () => {
   if (secondSlide) {
     secondSlide.classList.add("active-swipe");
     wipeSlide(null, secondSlide, 1); // Center the second slide
-    arrowsBehaviour(wipePrevBtn, wipeNextBtn, 1); // Update arrow visibility
+//    arrowsBehaviour(wipePrevBtn, wipeNextBtn, 1); // Update arrow visibility
   }
 };
 
@@ -279,6 +287,42 @@ dycalendar.draw({
  
  })
 
+// Calender Info
 
+let cal = document.getElementById('dycalendar');
+let activeCalInfo = null;
+
+// FIXME: the toUpperCase is probably not doing anything but idk the spec.
+cal.addEventListener('mouseover', (eve) => {
+	if(eve.target.tagName.toUpperCase() == 'TD' && !isNaN(eve.target.textContent))
+	{
+		const month_year = document.getElementsByClassName('dycalendar-span-month-year')[0]
+		const id = eve.target.textContent + '-' + month_year.textContent.replace(' ', '-');
+
+		if(activeCalInfo)
+			activeCalInfo.classList.add('is-hidden');
+
+		let doc = document.getElementById(id);
+
+		if(doc == null)
+			doc = document.getElementById('no-event-scheduled');
+
+		doc.classList.remove('is-hidden');
+
+		activeCalInfo = doc
+	}
+})
+
+cal.addEventListener('mouseout', (eve) => {
+	if(activeCalInfo)
+		activeCalInfo.classList.add('is-hidden');
+})
+
+function initCalInfo() {
+	const calinfo = document.querySelector('.calendarinfo');
+	Array.from(calinfo.children).forEach((e) => e.classList.add('is-hidden'))
+}
+
+initCalInfo()
 
 })(jQuery);
