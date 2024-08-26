@@ -117,9 +117,34 @@
 
 <div class="calender-body">
 	<div class="calender">
-
 		<div class="dycalendar" id="dycalendar"></div>
 
+		<!--
+			class calendarinfo should contain all the information to be displayed
+			when hover happens.
+
+			id should be the date in the format <day>-<full month name>-<year>.
+
+			if id is 'no-event-scheduled' then it is displayed incase no event is
+			scheduled
+
+			for debug perposes an inline style is added, please remove them :)
+		-->
+
+		<div class='calendarinfo' style='background:seagreen; margin: 20px; text-decoration: underline; text-align: center; font-size: 32px; '>
+			<div id='12-August-2024'>
+				Something event is scheduled
+			</div>
+			<div id='15-August-2024'>
+				Something else was scheduled
+			</div>
+			<div id='15-September-2024'>
+				Eyyy the event is in the next month
+			</div>
+			<div id='no-event-scheduled'>
+				No Event Scheduled on this date
+			</div>
+		</div>
 	</div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/dycalendarjs@1.2.1/js/dycalendar.js"></script>
