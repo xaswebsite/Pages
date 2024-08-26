@@ -166,109 +166,32 @@
 
 		});
 
+	// Owl Carousel
+	var owl = $('.owl-carousel')
+	owl.owlCarousel({
+		loop: true,
+		center: true,
+		navigation: true,
+		margin: 10,
+		animateIn: 'linear',
+		animateOut: 'linear',
+		mouseDrag: false,
+		smartSpeed: 800,
+		responsive: {
+			0 : {
+				items: 1
+			},
+			600 : {
+				items: 2
+			},
+			1000 : {
+				items: 3
+			},
+		}
+	})
 
-//Carousel
-
-const wiperTrack = document.querySelector(".wiper-track");
-const wipes = Array.from(wiperTrack.children);
-const wipePrevBtn = document.querySelector(".wiper-button__right");
-const wipeNextBtn = document.querySelector(".wiper-button__left");
-
-const updateDimensions = () => {
-  const wipeWidth = wipes[0].getBoundingClientRect().width;
-  const wrapperWidth = document.querySelector(".wiper-wrapper").getBoundingClientRect().width;
-  return { wipeWidth, wrapperWidth };
-};
-
-//NOTE: We do not want to hide the arrows if we are scrolling
-/*
-const arrowsBehaviour = (wipePrevBtn, wipeNextBtn, index) => {
-  if (index === 0) {
-    wipePrevBtn.classList.add("is-hidden");
-    wipeNextBtn.classList.remove("is-hidden");
-  } else if (index === wipes.length - 1) {
-    wipePrevBtn.classList.remove("is-hidden");
-    wipeNextBtn.classList.add("is-hidden");
-  } else {
-    wipePrevBtn.classList.remove("is-hidden");
-    wipeNextBtn.classList.remove("is-hidden");
-  }
-};
-*/
-
-const wipeSlide = (activeSlide, nextSlide, targetIndex) => {
-  const { wipeWidth, wrapperWidth } = updateDimensions();
-
-  // Calculate the offset to center the slide
-  const offset = (wrapperWidth - wipeWidth) / 2 - 50;
-
-  // Calculate the new transform value
-  const newTransform = -((wipeWidth + 48) * targetIndex - offset);
-
-  // Apply the transform
-  wiperTrack.style.transform = `translateX(${newTransform}px)`;
-
-  // Update slide scales
-  if (activeSlide) {
-    activeSlide.classList.remove("active-swipe");
-    activeSlide.style.transform = "scale(1)";
-  }
-  if (nextSlide) {
-    nextSlide.classList.add("active-swipe");
-    nextSlide.style.transform = "scale(1.1)";
-  }
-};
-
-// Handle Next Button Click
-wipeNextBtn.addEventListener("click", () => {
-  const activeSlide = wiperTrack.querySelector(".active-swipe");
-  const nextSlide = activeSlide.nextElementSibling;
-  if (nextSlide) {
-    const targetIndex = wipes.findIndex((slide) => slide === nextSlide);
-    wipeSlide(activeSlide, nextSlide, targetIndex);
-//    arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
-  }
-  else {
-    wipeSlide(activeSlide, wipes[0], 0);
-  }
-});
-
-// Handle Previous Button Click
-wipePrevBtn.addEventListener("click", () => {
-  const activeSlide = wiperTrack.querySelector(".active-swipe");
-  const prevSlide = activeSlide.previousElementSibling;
-  if (prevSlide) {
-    const targetIndex = wipes.findIndex((slide) => slide === prevSlide);
-    wipeSlide(activeSlide, prevSlide, targetIndex);
- //   arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
-  }
-  else {
-    wipeSlide(activeSlide, wipes[wipes.length - 1], wipes.length - 1);
-  }
-});
-
-// Initialize second slide as active and centered
-const initializeCarousel = () => {
-  const secondSlide = wipes[1]; // Select the second slide
-  if (secondSlide) {
-    secondSlide.classList.add("active-swipe");
-    wipeSlide(null, secondSlide, 1); // Center the second slide
-//    arrowsBehaviour(wipePrevBtn, wipeNextBtn, 1); // Update arrow visibility
-  }
-};
-
-initializeCarousel();
-
-// Update dimensions on resize
-window.addEventListener('resize', () => {
-  const activeSlide = wiperTrack.querySelector(".active-swipe");
-  if (activeSlide) {
-    const targetIndex = wipes.findIndex((slide) => slide === activeSlide);
-    wipeSlide(activeSlide, activeSlide, targetIndex); // Re-center the active slide
-  }
-});
-
-
+	$('.wiper-div__right').click(() => {owl.trigger('prev.owl.carousel')})
+	$('.wiper-div__left').click(() => {owl.trigger('next.owl.carousel')})
 
 //calender
 dycalendar.draw({

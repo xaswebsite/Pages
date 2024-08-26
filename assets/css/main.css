@@ -1552,6 +1552,44 @@ body.is-preload #banner p {
 
 /* slider */
 
+.owl-item.active.center {
+	transform: scale(1.27);
+	z-index: 3;
+}
+
+.owl-item.active.center .item img{
+	background: transparent;
+	box-shadow: 0 4px 8px rgba(116, 159, 216, 0.411);
+	opacity: 1;
+}
+
+.carousel-config {
+	max-width: 1400px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.carousel-config>div {
+	width: 85%;
+	overflow: visible;
+}
+
+.carousel-config button {
+	transform: translateY(150%);
+	margin-inline: 10px;
+}
+
+.item img {
+	border-radius: 30px;
+	opacity: 0.6;
+}
+
+.item {
+	margin-block: 30px;
+}
+
 .carousel-container {
     display: flex;
     justify-content: center;
@@ -1566,111 +1604,7 @@ body.is-preload #banner p {
     bottom:20px;
     height: 330px;
   }
-  
-  .wiper-track {
-    display: flex;
-    gap: 3rem; 
-    margin: 0 auto;
-    transition: transform 0.4s ease-in;
-    padding: 0 2rem; 
-  }
-  
-  .wiper-item {
-    width: 350px; 
-    height: 250px; 
-    flex: 0 0 auto;
-    position: relative;
-    transition: scale 0.2s linear;
-  }
-  
-  .wiper-button img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  .wiper {
-    max-width: 1400px; 
-    position: relative;
-    margin: 0 auto;
-  }
-  
-  .active-swipe {
-    transform: scale(1.1);
-  }
-  
-  .wiper-button {
-    margin: 0 1rem;
-    height: 70px;
-    width: 45px;
-    position: absolute;
-    top: 27%;
-    background: transparent;
-    border: none;
-    transform: translateY(-50%);
-    z-index: 1;
-    font-size: 18px;
-  }
-  
-  .wiper-button__left {
-    right: 0;
-    transform: translateY(-50%) rotate(180deg);
-  }
-  
-  .wiper__image-button {
-    right: 50%;
-    top: 50%;
-    position: absolute;
-    padding: 0.8rem 1rem;
-    border-radius: 3px;
-    background-color: white;
-    border: none;
-    font-size: 1.4rem;
-    transform: translateY(-50%) translateX(50%);
-    cursor: pointer;
-  }
-  
-  .wiper-wrapper {
-    max-width: 1200px; 
-    overflow: hidden;
-    padding: 2rem 1rem;
-    margin: 0 auto;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  
-  .swiper__image-button {
-    right: 50%;
-    top: 50%;
-    position: absolute;
-    padding: 0.8rem 1rem;
-    border-radius: 3px;
-    background-color: white;
-    border: none;
-    font-size: 1rem;
-    transform: translateY(-50%) translateX(50%);
-    cursor: pointer;
-  }
-  
-  .swiper__image-button:hover {
-    color: red;
-  }
-  
-  .wiper__image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(116, 159, 216, 0.411);
-  }
-  
-  .wiper-item:not(.active-swipe) .wiper__image {
-    filter: blur(1px) brightness(0.7);
-    opacity: 0.6;
-  }
-  
+
   .is-hidden {
     display: none;
   }
@@ -1680,7 +1614,6 @@ body.is-preload #banner p {
 
 /* calender */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 
 .calender-body {
     position: relative;
