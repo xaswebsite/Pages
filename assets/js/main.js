@@ -173,8 +173,8 @@
 		center: true,
 		navigation: true,
 		margin: 10,
-		animateIn: 'linear',
-		animateOut: 'linear',
+		animateIn: 'ease',
+		animateOut: 'ease',
 		mouseDrag: false,
 		smartSpeed: 800,
 		responsive: {
@@ -249,3 +249,12 @@ function initCalInfo() {
 initCalInfo()
 
 })(jQuery);
+
+window.addEventListener('load', () => {
+	setTimeout(() => {
+		document.getElementById('universe').style = 'display: none;';
+		document.getElementById('page-wrapper').style = 'display: block;';
+		}, 3000)
+	// idk why this one does not play other animations do play until all resources are loaded.
+	// neverthe less we just artifically wait 3 second to just play the cool animation
+});

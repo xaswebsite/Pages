@@ -4,129 +4,161 @@
     <title>Solid State by HTML5 UP</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="preload" href="assets/css/loader.css" as='style' />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.css" />
-	
+
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	
+
 </head>
 <body class="is-preload">
 
-<!-- Page Wrapper -->
-<div id="page-wrapper">
+	<!-- Loader -->
+    <div id='universe'>
+	    <div id='galaxy'>
+		    <div class='circle'></div>
+		    <div class='circle2'></div>
+		    <div class='circle3'></div>
+		    <div id='orbit0'>
+			    <div id='pos0'>
+				    <div id='dot0'></div>
+			    </div>
+		    </div>
+		    <div id='orbit1'>
+			    <div id='pos1'>
+				    <div id='dot1'></div>
+			    </div>
+		    </div>
+		    <div id='orbit2'>
+			    <div id='pos2'>
+				    <div id='dot2'></div>
+			    </div>
+		    </div>
+		    <div id='orbit3'>
+			    <div id='pos3'>
+				    <div id='dot3'></div>
+			    </div>
+		    </div>
+	    </div>
+    </div>
 
-   <!-- Header -->
-   <header id="header" class="alt">
-	<h1 class="xas-scroll"><a href="index.html">XAS</a></h1>
-	<nav>
-		<a href="#" id="menu-toggle">☰</a> <!-- Hamburger Icon -->
-		<div id="dropdown-menu" class="hidden">
-			<ul id="menu">
-				<li><a href="#aboutus">About Us</a></li>
-				<li><a href="#felo">FELO</a></li>
-				<li><a href="#events">Events</a></li>
-				<li>
-					<a href="#education">Education ></a>
-					<ul id="edu">
-						<li><a href="#">Reasearch</a></li>
-						<li><a href="#">Outreach</a></li>
+	<!-- Page Wrapper -->
+	<div id="page-wrapper" defer>
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1 class="xas-scroll"><a href="index.html">XAS</a></h1>
+			<nav>
+				<a href="#" id="menu-toggle">☰</a> <!-- Hamburger Icon -->
+				<div id="dropdown-menu" class="hidden">
+					<ul id="menu">
+						<li><a href="#aboutus">About Us</a></li>
+						<li><a href="#felo">FELO</a></li>
+						<li><a href="#events">Events</a></li>
+						<li>
+							<a href="#education">Education ></a>
+							<ul id="edu">
+								<li><a href="#">Reasearch</a></li>
+								<li><a href="#">Outreach</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#astroblogs">Astroblogs ></a>
+							<ul id="astro">
+								<li><a href="#">Astrophotgraphy</a></li>
+								<li><a href="#">Write-ups</a></li>
+
+							</ul>
+						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="#astroblogs">Astroblogs ></a>
-					<ul id="astro">
-						<li><a href="#">Astrophotgraphy</a></li>
-						<li><a href="#">Write-ups</a></li>
-						
-					</ul>
-				</li>
-			</ul>
+				</div>
+			</nav>
+			       </header>
+
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<div class="logo"><span class="icon"></span></div>
+				<h2>This is Solid State</h2>
+				<p>Another free + fully responsive site template</p>
+			</div>
+		</section>
+
+		<!--Slider-->
+		<div class='carousel-config'>
+			<button class="wiper-div wiper-div__right"> &lt; </button>
+			<div class="owl-carousel owl-theme">
+				<div class='item'> <img src="./images/slider1.jpg" alt="background-image"> </div>
+				<div class='item'> <img src="./images/slider2.jpg" alt="background-image"> </div>
+				<div class='item'> <img src="./images/slider3.jpg" alt="background-image"> </div>
+				<div class='item'> <img src="./images/slider4.jpg" alt="background-image"> </div>
+				<div class='item'> <img src="./images/slider5.jpg" alt="background-image"> </div>
+			</div>
+			<button class="wiper-div wiper-div__left"> &gt; </button>
 		</div>
-	</nav>
-       </header>
 
-    <!-- Banner -->
-    <section id="banner">
-        <div class="inner">
-            <div class="logo"><span class="icon"></span></div>
-            <h2>This is Solid State</h2>
-            <p>Another free + fully responsive site template</p>
-        </div>
-    </section>
-</div>
+		<!--Calender-->
 
-<!--Slider-->
-<div class='carousel-config'>
-	<button class="wiper-div wiper-div__right"> &lt; </button>
-	<div class="owl-carousel owl-theme">
-		<div class='item'> <img src="./images/slider1.jpg" alt="background-image"> </div>
-		<div class='item'> <img src="./images/slider2.jpg" alt="background-image"> </div>
-		<div class='item'> <img src="./images/slider3.jpg" alt="background-image"> </div>
-		<div class='item'> <img src="./images/slider4.jpg" alt="background-image"> </div>
-		<div class='item'> <img src="./images/slider5.jpg" alt="background-image"> </div>
-	</div>
-	<button class="wiper-div wiper-div__left"> &gt; </button>
-</div>
+		<div class="calender-body">
+			<div class="calender">
+				<div class="dycalendar" id="dycalendar"></div>
 
-<!--Calender-->
+				<!--
+					class calendarinfo should contain all the information to be displayed
+					when hover happens.
 
-<div class="calender-body">
-	<div class="calender">
-		<div class="dycalendar" id="dycalendar"></div>
+					id should be the date in the format <day>-<full month name>-<year>.
 
-		<!--
-			class calendarinfo should contain all the information to be displayed
-			when hover happens.
+					if id is 'no-event-scheduled' then it is displayed incase no event is
+					scheduled
 
-			id should be the date in the format <day>-<full month name>-<year>.
+					for debug perposes an inline style is added, please remove them :)
+				-->
 
-			if id is 'no-event-scheduled' then it is displayed incase no event is
-			scheduled
-
-			for debug perposes an inline style is added, please remove them :)
-		-->
-
-		<div class='calendarinfo' style='background:seagreen; margin: 20px; text-decoration: underline; text-align: center; font-size: 32px; '>
-			<div id='12-August-2024'>
-				Something event is scheduled
+				<div class='calendarinfo' style='background:seagreen; margin: 20px; text-decoration: underline; text-align: center; font-size: 32px; '>
+					<div id='12-August-2024'>
+						Something event is scheduled
+					</div>
+					<div id='15-August-2024'>
+						Something else was scheduled
+					</div>
+					<div id='15-September-2024'>
+						Eyyy the event is in the next month
+					</div>
+					<div id='no-event-scheduled'>
+						No Event Scheduled on this date
+					</div>
+				</div>
 			</div>
-			<div id='15-August-2024'>
-				Something else was scheduled
-			</div>
-			<div id='15-September-2024'>
-				Eyyy the event is in the next month
-			</div>
-			<div id='no-event-scheduled'>
-				No Event Scheduled on this date
-			</div>
+			<script src="assets/js/dycalendar.js"></script>
 		</div>
+		<!--Footer-->
+
+		<footer class="site-footer">
+			<div class="footer-left">
+				<a href="#submissions" class="footer-link">Submissions</a>
+			</div>
+			<div class="footer-center">
+				<h2 class="footer-heading">Contact Us</h2>
+			</div>
+			<div class="footer-right">
+				<a href="#email" class="footer-link">Email</a>
+			</div>
+		</footer>
 	</div>
-<script src="assets/js/dycalendar.js"></script>
-</div>
 
-<!--Footer-->
-
-<footer class="site-footer">
-    <div class="footer-left">
-        <a href="#submissions" class="footer-link">Submissions</a>
-    </div>
-    <div class="footer-center">
-        <h2 class="footer-heading">Contact Us</h2>
-    </div>
-    <div class="footer-right">
-        <a href="#email" class="footer-link">Email</a>
-    </div>
-</footer>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
-<script src='assets/js/owl.carousel.js'></script>
-<script src="assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/commonninja.js" defer></script>
+	<script src='assets/js/owl.carousel.js'></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 </html>
