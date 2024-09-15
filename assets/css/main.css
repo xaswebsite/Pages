@@ -1608,27 +1608,53 @@ body.is-preload #banner p {
   .is-hidden {
     display: none;
   }
-  
-
-
 
 /* calender */
 .calender-body {
     position: relative;
+    width: 70%;
+    min-width: 640px;
+    margin: auto;
     top: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    align-items: stretch;
     background: rgba(10, 25, 51, 0.1);
     padding: 20px;
+    overflow: hidden; 
 }
+
+.calendarinfo {
+	width: 50%;
+	text-align: center;
+	padding: 10px;
+	box-shadow: 0 4px 8px rgba(107, 137, 177, 0.411);
+	background: rgba(10, 25, 51, 0.8); /* Darker background for contrast */
+	border-radius: 0px 15px 15px 0px;
+}
+
+.calendarinfo * {
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 980px) {
+	.calender-body {
+		flex-direction: column;
+		justify-content: stretch;
+	}	
+	.calendarinfo {
+		width: 100%;
+		border-radius: 15px 15px 15px 15px;
+	}
+}
+
 .dycalendar {
-    height: 100%; /* Adjust height to fit content */
-    width: 120%; /* Set a width to fit nicely within the container */
+    /*height: 100%;  Adjust height to fit content */
+    /*width: 120%;  Set a width to fit nicely within the container */
     max-width: 1500px; /* Limit maximum width */
     background: rgba(10, 25, 51, 0.8); /* Darker background for contrast */
-    border-radius: 15px;
+    border-radius: 15px 0px 0px 15px;
     box-shadow: 0 4px 8px rgba(107, 137, 177, 0.411);
     padding: 20px;
     box-sizing: border-box;
@@ -1734,6 +1760,7 @@ body.is-preload #banner p {
 
 @media screen and (max-width: 736px) {
     .dycalendar {
+	border-radius: 15px 15px 15px 15px;
         width: 80%;
     }
 

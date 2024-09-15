@@ -239,11 +239,16 @@ cal.addEventListener('mouseover', (eve) => {
 cal.addEventListener('mouseout', (eve) => {
 	if(activeCalInfo)
 		activeCalInfo.classList.add('is-hidden');
+
+	activeCalInfo = document.getElementById('no-event-scheduled');
+	activeCalInfo.classList.remove('is-hidden');
 })
 
 function initCalInfo() {
 	const calinfo = document.querySelector('.calendarinfo');
 	Array.from(calinfo.children).forEach((e) => e.classList.add('is-hidden'))
+	activeCalInfo = document.getElementById('no-event-scheduled');
+	activeCalInfo.classList.remove('is-hidden');
 }
 
 initCalInfo()
