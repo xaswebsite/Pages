@@ -1299,7 +1299,7 @@ body.is-menu-visible #menu .links li {
 
 /* Dropdown Menu Styles */
 #menu li ul {
-  display: none; /* Hide the dropdowns initially */
+  /*display: none;  Hide the dropdowns initially */
  /* position: absolute;  Position relative to the parent item */
   top: 145px; /* Position below the parent item */
   left: 50%; /* Align left edge */
@@ -1828,7 +1828,7 @@ body.is-preload #banner p {
 
 .not-hidden {
 	position: fixed;
-	width: 6%;	
+	width: 4%;
 	top: -10px;
 	left: 0px;
 	opacity: 1;
