@@ -1313,6 +1313,13 @@ body.is-menu-visible #menu .links li {
   padding-left: 0;
   padding-right: 0;
   visibility: hidden;
+
+  transition: max-height 3s ease;
+}
+
+#menu li:hover ul {
+  display: block; /* Show dropdown on hover */
+  visibility: visible;
 }
 
 #astro{
@@ -1321,11 +1328,6 @@ body.is-menu-visible #menu .links li {
 
 #edu{
     top: 110px !important;
-}
-
-#menu li:hover ul {
-  display: block; /* Show dropdown on hover */
-  visibility: visible;
 }
 
 #menu li ul li {
@@ -1822,4 +1824,19 @@ body.is-preload #banner p {
 
 .footer-link:hover {
     color: #10185e; 
+}
+
+.not-hidden {
+	position: fixed;
+	width: 6%;	
+	top: -10px;
+	left: 0px;
+	opacity: 1;
+	min-width: 100px;
+
+	transition: opacity 0.3s ease-out;
+}
+
+.hidden {
+	opacity: 0;
 }
