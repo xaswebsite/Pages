@@ -1299,7 +1299,6 @@ body.is-menu-visible #menu .links li {
 
 /* Dropdown Menu Styles */
 #menu li ul {
-  /*display: none;  Hide the dropdowns initially */
  /* position: absolute;  Position relative to the parent item */
   top: 145px; /* Position below the parent item */
   left: 50%; /* Align left edge */
@@ -1313,13 +1312,16 @@ body.is-menu-visible #menu .links li {
   padding-left: 0;
   padding-right: 0;
   visibility: hidden;
+  max-height: 0px;
+  opacity: 0;
 
-  transition: max-height 3s ease;
+  transition: max-height 0.3s ease-out, opacity  0.3s ease-out;
 }
 
 #menu li:hover ul {
-  display: block; /* Show dropdown on hover */
   visibility: visible;
+  opacity: 1;
+  max-height: 100%;
 }
 
 #astro{
@@ -1829,10 +1831,10 @@ body.is-preload #banner p {
 .not-hidden {
 	position: fixed;
 	width: 4%;
-	top: -10px;
-	left: 0px;
+	top: 0.1em;
+	left: 1.2em;
 	opacity: 1;
-	min-width: 100px;
+	min-width: 50px;
 
 	transition: opacity 0.3s ease-out;
 }
