@@ -1,0 +1,248 @@
+* {
+    font-family: Nunito, sans-serif;
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  body {
+    background-color: #2e3141;
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+      ),
+      url("./image/bg.jpg");
+    background-size: auto, cover;
+    background-attachment: fixed, fixed;
+    background-position: center, center;
+  }
+
+  .text-blk {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    line-height: 25px;
+  }
+  
+  .responsive-cell-block {
+    min-height: 75px;
+  }
+  
+  .responsive-container-block {
+    min-height: 75px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    justify-content: space-evenly;
+  }
+  
+  .outer-container {
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    
+  }
+  
+  .inner-container {
+    max-width: 1320px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+  }
+  
+  .section-head-text {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 48px;
+    color: rgb(0, 135, 177);
+    margin: 0 0 10px 0;
+  }
+  
+  .section-subhead-text {
+    font-size: 25px;
+    color: rgb(153, 153, 153);
+    line-height: 35px;
+    max-width: 470px;
+    text-align: center;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 60px;
+    margin-left: 0px;
+  }
+  
+  .img-wrapper {
+    width: 100%;
+  }
+  
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-media-links {
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-media-links a img{
+    color: rgb(185, 176, 176);
+  }
+  
+  .name {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(185, 176, 176);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+  }
+  
+  .position {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(0, 135, 177);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+  }
+  
+  .team-img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .team-card-container {
+    width: 280px;
+    margin: 0 0 40px 0;
+  }
+  
+  @media (max-width: 500px) {
+    .outer-container {
+      padding: 10px 20px 10px 20px;
+    }
+  
+    .section-head-text {
+      text-align: center;
+    }
+  }
+
+  
+.slideout-menu {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+
+	height: 100vh;
+
+	font-family: Raleway, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+
+	overflow:hidden;
+}
+
+.slideout-menu-toggle-icon {
+	text-align: right;
+	font-size: 30px;
+	border-radius: 5px;
+	position: relative;
+  color: #fff;
+}
+
+.slideout-menu-toggle-icon span {
+	margin-right: 25px;
+	cursor: pointer;
+}
+
+.slideout-menu .main-body {
+	position: static;
+	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+	text-align: center;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+
+	background-color: rgba( 58, 53, 53, 0.363 );
+	backdrop-filter: blur(10px);
+	box-shadow: -10px 0 10px rgba(14, 12, 12, 0.37);
+}
+
+.slideout-menu .main-body ul {
+	list-style: none;
+	padding: 0px;
+}
+
+.slideout-menu .main-body li a {
+	padding-block: 15px;
+	padding-inline: 20px;
+
+	display: block;
+
+	text-decoration: none;
+	color: #fff;
+
+	transition: background-color 0.3s ease-out;
+}
+
+.slideout-menu .main-body li:hover > a {
+	background-color: #4b09af40;
+}
+
+.slideout-menu .main-body li > ul {
+	transition: opacity 0.5s ease-out, max-height 0.5s ease-out;
+	opacity: 0;
+	overflow: hidden;
+	/* max-height: 0; */
+
+	width: 70%;
+	margin: auto;
+
+	background-color: rgba(58, 53, 53, 0.9);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+}
+
+.slideout-menu .main-body li:hover >  ul {
+	opacity: 1;
+}
+
+.not-hidden {
+	position: fixed;
+	width: 4%;
+	top: 0.1em;
+	left: 1.2em;
+	opacity: 1;
+	min-width: 50px;
+	transition: opacity 0.3s ease-out;
+}
+
+
+
+/* Controlled By Javascript */
+
+.slideout-menu-hidden { transform: translateX(100%); opacity: 0;}
+.slideout-menu-visible{ transform: translateX(0%); opacity: 1;}
