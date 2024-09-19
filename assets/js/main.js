@@ -257,6 +257,6 @@ function hideLoader() {
 	$('#universe').fadeOut('slow');
 }
 
-window.onload = () => setTimeout(hideLoader, 500);
+window.addEventListener('load', hideLoader);
 
 })(jQuery);
