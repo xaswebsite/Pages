@@ -8,6 +8,7 @@ function MenuInitialize() {
 		this.isVisible = false
 		menu_list.classList.remove('slideout-menu-visible');
 		menu_list.classList.add('slideout-menu-hidden');
+		menu_list.style.width = '0px';
 	}
 
 	menu_list.addEventListener('transitionend', (t) => {
