@@ -79,5 +79,5 @@
 
 /* Controlled By Javascript */
 
-.slideout-menu-hidden { transform: translateX(100%); opacity: 0;}
-.slideout-menu-visible{ transform: translateX(0%); opacity: 1;}
+.slideout-menu-hidden { transform: translateX(100%); opacity: 0; }
+.slideout-menu-visible{ transform: translateX(0%); opacity: 1; }

@@ -10,6 +10,16 @@ function MenuInitialize() {
 		menu_list.classList.add('slideout-menu-hidden');
 	}
 
+	menu_list.addEventListener('transitionend', (t) => {
+		if(!this.isVisible)
+			menu_list.style.width = '0px';
+	});
+
+	menu_list.addEventListener('transitionstart', (t) => {
+		if(this.isVisible)
+			menu_list.style.width = '100%';
+	});
+
 	toggle_icon.addEventListener('click', () => {
 		if(this.isVisible) {
 			menu_list.classList.remove('slideout-menu-visible');
