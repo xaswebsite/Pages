@@ -3950,3 +3950,8 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+.slideout-menu-toggle-icon {
+	position: static;
+	width: 100%;
+}
