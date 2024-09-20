@@ -3966,3 +3966,8 @@ input, select, textarea {
 		.hidden {
 			opacity: 0;
 		}
+
+	.slideout-menu-toggle-icon {
+		position: static;
+		width: 100%;
+	}
