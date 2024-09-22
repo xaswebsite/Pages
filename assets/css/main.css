@@ -1582,11 +1582,12 @@ body.is-preload #banner p {
 .carousel-config button {
 	transform: translateY(150%);
 	margin-inline: 10px;
+	background: rgba(1.0, 1.0, 1.0, 0.7);
 }
 
 .item img {
 	border-radius: 30px;
-	opacity: 0.6;
+	/* opacity: 0.6; */
 	filter: blur(2px);
 }
 

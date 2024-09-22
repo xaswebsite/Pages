@@ -1,0 +1,16 @@
+
+#spacebackground-canvas {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	filter: brightness(0.6);
+}
+
+#spacebackground-image {
+	display: none;
+}
+
+body {
+	margin: 0px;
+}
