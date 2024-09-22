@@ -1,5 +1,5 @@
 .slideout-menu {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	right: 0px;
 
@@ -8,8 +8,6 @@
 	font-family: Raleway, Helvetica, sans-serif;
 	font-weight: 400;
 	font-size: 1em;
-
-	overflow:hidden;
 }
 
 .slideout-menu-toggle-icon {
@@ -75,6 +73,10 @@
 
 .slideout-menu .main-body li:hover >  ul {
 	opacity: 1;
+}
+
+.slideout-wrapper {
+	position: relative;
 }
 
 /* Controlled By Javascript */

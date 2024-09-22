@@ -8,17 +8,20 @@ function MenuInitialize() {
 		this.isVisible = false
 		menu_list.classList.remove('slideout-menu-visible');
 		menu_list.classList.add('slideout-menu-hidden');
-		menu_list.style.width = '0px';
 	}
 
 	menu_list.addEventListener('transitionend', (t) => {
-		if(!this.isVisible)
-			menu_list.style.width = '0%';
+		if(!this.isVisible && t.propertyName == 'opacity') {
+			console.log(t)
+			menu_list.style.width = '0px';
+		}
 	});
 
 	menu_list.addEventListener('transitionstart', (t) => {
-		if(this.isVisible)
+		if(this.isVisible && t.propertyName == 'opacity') {
+			console.log(t)
 			menu_list.style.width = '100%';
+		}
 	});
 
 	toggle_icon.addEventListener('click', () => {

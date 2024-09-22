@@ -1618,7 +1618,6 @@ body.is-preload #banner p {
 .calender-body {
     position: relative;
     width: 70%;
-    min-width: 640px;
     margin: auto;
     top: 200px;
     display: flex;
