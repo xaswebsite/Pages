@@ -1617,8 +1617,7 @@ body.is-preload #banner p {
 /* calender */
 .calender-body {
     position: relative;
-    width: 70%;
-    margin: auto;
+    display: flex;
     top: 200px;
     display: flex;
     justify-content: center;
@@ -1629,12 +1628,13 @@ body.is-preload #banner p {
 }
 
 .calendarinfo {
-	width: 50%;
+	width: 40%;
 	text-align: center;
 	padding: 10px;
 	box-shadow: 0 4px 8px rgba(107, 137, 177, 0.411);
 	background: rgba(10, 25, 51, 0.8); /* Darker background for contrast */
 	border-radius: 0px 15px 15px 0px;
+	overflow: hidden;
 }
 
 .calendarinfo * {
@@ -1654,8 +1654,7 @@ body.is-preload #banner p {
 }
 
 .dycalendar {
-    /*height: 100%;  Adjust height to fit content */
-    /*width: 120%;  Set a width to fit nicely within the container */
+    height: 100%; /* Adjust height to fit content*/
     max-width: 1500px; /* Limit maximum width */
     background: rgba(10, 25, 51, 0.8); /* Darker background for contrast */
     border-radius: 15px 0px 0px 15px;
@@ -1665,6 +1664,7 @@ body.is-preload #banner p {
     position: relative;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust position to true center */
+    overflow: scroll;
 }
 
 .dycalendar table {
@@ -1765,7 +1765,7 @@ body.is-preload #banner p {
 @media screen and (max-width: 736px) {
     .dycalendar {
 	border-radius: 15px 15px 15px 15px;
-        width: 80%;
+        width: 100%;
     }
 
     .dycalendar-month-container{

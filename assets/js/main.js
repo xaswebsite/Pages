@@ -175,7 +175,7 @@
 		margin: 10,
 		animateIn: 'ease',
 		animateOut: 'ease',
-		mouseDrag: false,
+		mouseDrag: true,
 		smartSpeed: 800,
 		responsive: {
 			0 : {
