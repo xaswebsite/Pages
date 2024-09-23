@@ -13,14 +13,14 @@ function MenuInitialize() {
 	menu_list.addEventListener('transitionend', (t) => {
 		if(!this.isVisible && t.propertyName == 'opacity') {
 			console.log(t)
-			menu_list.style.width = '0px';
+			menu_list.style.maxWidth = '0px';
 		}
 	});
 
 	menu_list.addEventListener('transitionstart', (t) => {
 		if(this.isVisible && t.propertyName == 'opacity') {
 			console.log(t)
-			menu_list.style.width = '100%';
+			menu_list.style.maxWidth = '';
 		}
 	});
 
