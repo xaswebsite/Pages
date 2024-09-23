@@ -1664,7 +1664,7 @@ body.is-preload #banner p {
     position: relative;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust position to true center */
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .dycalendar table {
