@@ -2,25 +2,29 @@
 function MenuInitialize() {
 	const toggle_icon = document.querySelector('.slideout-menu-toggle-icon span');
 	const menu_list   = document.querySelector('.slideout-menu .main-body');
+	const slideout = document.querySelector('.slideout-menu');
+
+	this.maxWidth = slideout.scrollWidth;
 
 	if(this.isVisible == undefined)
 	{
-		this.isVisible = false
+		this.isVisible = false;
 		menu_list.classList.remove('slideout-menu-visible');
 		menu_list.classList.add('slideout-menu-hidden');
+		slideout.style.width = '0px';
 	}
 
 	menu_list.addEventListener('transitionend', (t) => {
 		if(!this.isVisible && t.propertyName == 'opacity') {
 			console.log(t)
-			menu_list.style.maxWidth = '0px';
+			slideout.style.width= '0px';
 		}
 	});
 
 	menu_list.addEventListener('transitionstart', (t) => {
 		if(this.isVisible && t.propertyName == 'opacity') {
 			console.log(t)
-			menu_list.style.maxWidth = '';
+			slideout.style.width = this.maxWidth+'px';
 		}
 	});
 

@@ -24,8 +24,9 @@
 }
 
 .slideout-menu .main-body {
-	position: static;
 	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
+	position: static;
 	text-align: center;
 	height: 100%;
 
@@ -40,6 +41,7 @@
 .slideout-menu .main-body ul {
 	list-style: none;
 	padding: 0px;
+	width: 100%;
 }
 
 .slideout-menu .main-body li a {
@@ -82,5 +84,6 @@
 
 /* Controlled By Javascript */
 
-.slideout-menu-hidden { transform: translateX(100%); opacity: 0; }
-.slideout-menu-visible{ transform: translateX(0%); opacity: 1; }
+.slideout-menu-hidden { transform: translateX(100%); opacity: 0; }	
+.slideout-menu-visible { transform: translateX(0%); opacity: 1; }
+
