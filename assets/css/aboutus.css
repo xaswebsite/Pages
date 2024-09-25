@@ -3955,3 +3955,18 @@ input, select, textarea {
 	position: static;
 	width: 100%;
 }
+
+.not-hidden {
+	position: fixed;
+	width: 4%;
+	top: 0.1em;
+	left: 1.2em;
+	opacity: 1;
+	min-width: 50px;
+
+	transition: opacity 0.3s ease-out;
+}
+
+.hidden {
+	opacity: 0;
+}
