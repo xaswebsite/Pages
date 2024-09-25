@@ -1,4 +1,6 @@
 .slideout-menu {
+	transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+
 	position: fixed;
 	top: 0px;
 	right: 0px;
@@ -24,8 +26,7 @@
 }
 
 .slideout-menu .main-body {
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-
+	transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 	position: static;
 	text-align: center;
 	height: 100%;
