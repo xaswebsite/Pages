@@ -221,7 +221,6 @@ a {
     border-bottom-color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-  border-bottom: dotted 1px rgba(255, 255, 255, 0.192);
   color: #ffffff;
   text-decoration: none;
 }
@@ -1663,10 +1662,6 @@ body.is-preload #banner p {
 		width: 100%;
 		border-radius: 15px 15px 15px 15px;
 	}
-
-	.footer-center::after {
-		content: "XAS"
-	}
 }
 
 .dycalendar {
@@ -1799,10 +1794,6 @@ body.is-preload #banner p {
         margin: 0 5px; /* Adjust margin for spacing */
         font-size: 20px; /* Smaller font size */
     }
-
-    .footer-center::after {
-	    content: "XAS"
-    }
 }    
   
 
@@ -1870,13 +1861,13 @@ body.is-preload #banner p {
 	filter: grayscale(0%);
 }
 
-.footer-center::after {
-	content: "Xavier's Astronomical Society"
+.footer-center span::after {
+	content: "Postgraduate and Research Department of Physics"
 }
 
 @media screen and (max-width: 925px) {
-	.footer-center::after {
-		content: "XAS"
+	.footer-center span::after {
+		content: "Department of Physics"
 	}
 }
 

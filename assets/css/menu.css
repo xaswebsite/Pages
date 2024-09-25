@@ -11,6 +11,8 @@
 	font-family: Raleway, Helvetica, sans-serif;
 	font-weight: 400;
 	font-size: 1em;
+	text-transform: uppercase;
+	line-height: 1.2em;
 }
 
 .slideout-menu-toggle-icon {
@@ -46,7 +48,7 @@
 }
 
 .slideout-menu .main-body li a {
-	padding-block: 15px;
+	padding-block: 25px;
 	padding-inline: 20px;
 
 	display: block;
