@@ -67,10 +67,10 @@ const SpaceBackgroundState = {
 
     		vec4 fromTex = texture(Background, suv);
 
-		vec4 col = mix(fromTex, vec4(1., 1., 1., 1.0), t) * (inte + 1.);
-	//	vec4 mask = mix(vec4(0., 0., 0., 1.), vec4(1., 1., 1., 1.0), len2 / (mass * sqrt(dw) * 4. * scale));
+		vec4 col = mix(fromTex, vec4(0.5, 0.5, 0.5, 1.0), t) * (inte + 1.);
+		vec4 mask = mix(vec4(0., 0., 0., 1.), vec4(1., 1., 1., 1.0), len2 / (mass * sqrt(dw) * 0.5 * scale));
 		
-		FragColor = col;// min(col, mask);
+		FragColor = min(col, mask);
 	}`,
 
 	program: 0,
