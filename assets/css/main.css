@@ -1573,17 +1573,16 @@ body.is-preload #banner p {
 
 .carousel-config {
 	max-width: 1400px;
-	font-size: 12pt;
 
 	margin: auto;
 	display: flex;
-	justify-content: stretch;
-	align-content: stretch;
+	justify-content: center;
+	align-content: center;
 
-	padding-block: 30px;
 	background: rgba(30, 26, 30, 0.5);
 	backdrop-filter: blur(8px);
 	border-radius: 30px;
+	padding-block: 30px;
 }
 
 .carousel-config>div {
@@ -1594,10 +1593,10 @@ body.is-preload #banner p {
 
 .carousel-config button {
 	margin-block: auto;
+	padding-inline: 2em;
 	background: rgba(1.0, 1.0, 1.0, 0.7);
-	margin-inline: 10px;
+	text-align: center;
 }
-
 .item img {
 	border-radius: 30px;
 	/* opacity: 0.6; */
@@ -1664,6 +1663,10 @@ body.is-preload #banner p {
 		width: 100%;
 		border-radius: 15px 15px 15px 15px;
 	}
+
+	.footer-center::after {
+		content: "XAS"
+	}
 }
 
 .dycalendar {
@@ -1704,7 +1707,7 @@ body.is-preload #banner p {
     font-size: 24px;
     cursor: pointer;
     text-align: center; /* Center text horizontally */
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #f0f0f0; /* Default text color for cells */
     vertical-align: middle; /* Center text vertically */
 }
@@ -1796,6 +1799,10 @@ body.is-preload #banner p {
         margin: 0 5px; /* Adjust margin for spacing */
         font-size: 20px; /* Smaller font size */
     }
+
+    .footer-center::after {
+	    content: "XAS"
+    }
 }    
   
 
@@ -1806,21 +1813,29 @@ body.is-preload #banner p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #38313152;  
+    padding-inline: 50px;
+    background: rgba(22, 19, 19, 0.8);
+    backdrop-filter: blur(8px);
     color: #fff; /* White text color */
     position: relative;
-    top: 450px;
+    top: 350px;
     width: 100%;
-    height: 130px;
+    height: 100px;
 }
 
 .footer-left, .footer-right {
-    font-size: 20px;
+    font-size: 1.5em;
+}
+
+.footer-right span {
+	margin-inline: 10px;
 }
 
 .footer-center {
-    font-size: 25px;
+    font-family: "Source Code Pro" sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
     text-align: center;
     flex-grow: 1; /* Allows the center content to expand */
 }
@@ -1833,12 +1848,36 @@ body.is-preload #banner p {
 .footer-link {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
     transition: color 0.3s ease;
 }
 
-.footer-link:hover {
-    color: #10185e; 
+.insta:hover {
+    color: hotpink; 
+}
+
+.mail:hover {
+    color: tomato; 
+}
+
+.sxc-logo {
+	filter: grayscale(100%);
+	transition:  filter 0.5s ease;
+	width: 65%;
+	transform: translateY(10%);
+}
+
+.sxc-logo:hover {
+	filter: grayscale(0%);
+}
+
+.footer-center::after {
+	content: "Xavier's Astronomical Society"
+}
+
+@media screen and (max-width: 925px) {
+	.footer-center::after {
+		content: "XAS"
+	}
 }
 
 .not-hidden {
