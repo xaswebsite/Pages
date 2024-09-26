@@ -1592,7 +1592,7 @@ body.is-preload #banner p {
 
 .carousel-config button {
 	margin-block: auto;
-	padding-inline: 2em;
+	padding-inline: 2.4%;
 	background: rgba(1.0, 1.0, 1.0, 0.7);
 	text-align: center;
 }
