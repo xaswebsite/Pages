@@ -1770,42 +1770,44 @@ input, select, textarea {
 	}
 
 	header.major {
+		/*
 		width: -moz-max-content;
 		width: -webkit-max-content;
 		width: -ms-max-content;
 		width: max-content;
+		*/
 		margin-bottom: 2em;
 	}
 
-		header.major > :first-child {
-			margin-bottom: 0;
-			width: calc(100% + 0.5em);
-		}
+	header.major > :first-child {
+		margin-bottom: 0;
+		width: calc(100% + 0.5em);
+	}
 
-			header.major > :first-child:after {
-				content: '';
-				background-color: #ffffff;
-				display: block;
-				height: 2px;
-				margin: 0.325em 0 0.5em 0;
-				width: 100%;
-			}
+	header.major > :first-child:after {
+		content: '';
+		background-color: #ffffff;
+		display: block;
+		height: 2px;
+		margin: 0.325em 0 0.5em 0;
+		width: 100%;
+	}
 
-		header.major > p {
-			font-size: 0.7em;
-			font-weight: 600;
-			letter-spacing: 0.25em;
-			margin-bottom: 0;
-			text-transform: uppercase;
-		}
+	header.major > p {
+		font-size: 0.7em;
+		font-weight: 600;
+		letter-spacing: 0.25em;
+		margin-bottom: 0;
+		text-transform: uppercase;
+	}
 
-		body.is-ie header.major > :first-child:after {
-			max-width: 9em;
-		}
+	body.is-ie header.major > :first-child:after {
+		max-width: 9em;
+	}
 
-		body.is-ie header.major > h1:after {
-			max-width: 100% !important;
-		}
+	body.is-ie header.major > h1:after {
+		max-width: 100% !important;
+	}
 
 	@media screen and (max-width: 736px) {
 
@@ -2275,7 +2277,10 @@ input, select, textarea {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
+
 		display: flex;
+		flex-direction: row-reverse;
+
 		cursor: default;
 		list-style: none;
 		margin-left: -1em;
@@ -3972,17 +3977,13 @@ input, select, textarea {
 		width: 100%;
 	}
 
-	.right_text{
-		text-align: right;
+
+	ul.actions_ondeez {
+		flex-direction: row;
 	}
 
-	.right_text.button {
-		text-align: right;
-		display: inline-block;
-	  }
-
-	  .right_text_head3{
-		text-align: right;
-		position: relative;
-		left:2.3rem
+	@media screen and (max-width: 980px) {
+		ul.actions_ondeez {
+			flex-direction: row-reverse;
+		}
 	}
