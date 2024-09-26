@@ -48,7 +48,7 @@ const SpaceBackgroundState = {
 		vec2 duv = uv - center;
 
 		float scale = 1.;
-		float mass = 0.0005;
+		float mass = 0.002;
 		float len2 = duv.x * duv.x + duv.y * duv.y;
 		float len = sqrt(len2); 
 
