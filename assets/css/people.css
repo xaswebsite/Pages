@@ -12,8 +12,16 @@
 }
 
 body {
-  background: #e8eaef;
-  min-height: 100vh;
+  background-color: #2e3141;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("../../images/bg_team.jpg");
+  background-size: auto, cover;
+  background-attachment: fixed, fixed;
+  background-position: center, center;
 }
 
 a {
@@ -40,20 +48,22 @@ section {
   p,
   h2,
   h3 {
+    color: #fff;
+    font-size: 30px;
     letter-spacing: 0.035rem;
   }
 
   p {
     line-height: 1.7;
-    color: #454545;
+    color: #ffffff;
     max-width: 70rem;
     margin: 0 auto;
     font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
   }
 
   h2 {
-    font-size: clamp(3rem, 2.4286rem + 2.2857vw, 5rem);
-    color: #111;
+    font-size: clamp(3rem, 2.4286rem + 2.2857vw, 2rem);
+    color: hsl(0, 0%, 99%);
     text-transform: capitalize;
     font-weight: 600;
     line-height: 1;
@@ -77,6 +87,8 @@ section {
     flex-wrap: wrap;
       /* grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); */
       gap: 2rem;
+      position: relative;
+      left:rem;
   
       @include mQ(51rem) {
         gap: 3.5rem;
@@ -115,7 +127,7 @@ section {
       flex: 1;
 
       .social-icon {
-        background: #111;
+        background: #494194;
         padding: 1rem 1.75rem;
         display: inline-block;
         position: absolute;
@@ -127,7 +139,7 @@ section {
         }
 
         &:hover i {
-          color: #003ef5;
+          color: #494194;
         }
       }
 
@@ -149,9 +161,10 @@ section {
           background: white;
           transition: 0.5s ease;
           padding: 4.5rem 2rem 0 3.2rem;
+          height: 220px;
 
           > div {
-            text-align: right;
+            text-align: center;
           }
 
           h3,
@@ -163,24 +176,25 @@ section {
             font-size: clamp(1.15rem, 1.1071rem + 0.1714vw, 1.3rem);
             font-weight: 800;
             color: #111;
+            
+            
           }
           p {
             color: #454545;
             font-size: 0.9rem;
           }
 
-          svg {
-            display: inline-block;
-            text-align: right;
-            width: 60px;
-            color: #003ef5;
-          }
         }
+      }
+
+      .web_card{
+        position: relative;
+            right: 1rem;
       }
 
       /*hover states*/
       .card-img-wrapper:hover ~ .card-content-wrapper .card-content {
-        background: #003ef5;
+        background: #494194;
 
         h3,
         p,
@@ -190,7 +204,7 @@ section {
       }
 
       .card-content-wrapper:hover .card-content {
-        background: #003ef5;
+        background: #494194;
 
         h3,
         p,
