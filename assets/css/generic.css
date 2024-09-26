@@ -2831,27 +2831,27 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #1bc0d6bd;
+				background-color: #6fc3df;
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #48087cce;
+				background-color: #8d82c4;
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #0a135f;
+				background-color: #ec8d81;
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #2499e7ad;
+				background-color: #e7b788;
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #6c91e7b7;
+				background-color: #8ea9e8;
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #29054bd8;
+				background-color: #87c5a4;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -3373,8 +3373,6 @@ input, select, textarea {
 
 		}
 
-		
-
 /* Banner */
 
 	#banner {
@@ -3412,7 +3410,7 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			pointer-events: none;
-			background-color: #0a102bab;
+			background-color: #242943;
 			content: '';
 			display: block;
 			height: 100%;
@@ -3483,7 +3481,7 @@ input, select, textarea {
 				}
 
 		#banner.major {
-			height: 60vh;
+			height: 75vh;
 			min-height: 30em;
 			max-height: 50em;
 		}
@@ -3493,7 +3491,7 @@ input, select, textarea {
 			}
 
 		#banner.style1:after {
-			background-color: #04232e;
+			background-color: #6fc3df;
 		}
 
 		#banner.style2:after {
@@ -3716,7 +3714,7 @@ input, select, textarea {
 	}
 
 		#footer .copyright li {
-			border-left: solid 1px rgba(65, 65, 167, 0.1);
+			border-left: solid 1px rgba(212, 212, 255, 0.1);
 			color: rgba(244, 244, 255, 0.2);
 			display: inline-block;
 			line-height: 1;
@@ -3952,26 +3950,3 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
-
-		.not-hidden {
-			position: fixed;
-			width: 4%;
-			top: 0.1em;
-			left: 1.2em;
-			opacity: 1;
-			min-width: 50px;
-		
-			transition: opacity 0.3s ease-out;
-		}
-		
-		.hidden {
-			opacity: 0;
-		}	
-
-.slideout-menu-toggle-icon {
-	position: static;
-	width: 100%;
-}
-
-.slideout-menu{
-}
