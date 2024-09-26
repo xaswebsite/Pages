@@ -162,6 +162,8 @@ function SpaceLoadImage() {
 	SpaceBackgroundState.BackgroundImageTexture.onload = (e) => {
 		gl.activeTexture(gl.TEXTURE0);
 		gl.bindTexture(gl.TEXTURE_2D, SpaceBackgroundState.Background);
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.MIRRORED_REPEAT);
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.MIRRORED_REPEAT);
 		gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, SpaceBackgroundState.BackgroundImageTexture);
 		gl.generateMipmap(gl.TEXTURE_2D);
 		gl.uniform1i(SpaceBackgroundState.Sampler, 0);

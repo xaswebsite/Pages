@@ -194,3 +194,20 @@ section {
     }
   }
 
+
+.not-hidden {
+	position: fixed;
+	width: 4%;
+	top: 0.1em;
+	left: 1.2em;
+	opacity: 1;
+	min-width: 50px;
+
+	background: black;
+
+	transition: opacity 0.3s ease-out;
+}
+
+.hidden {
+	opacity: 0;
+}
