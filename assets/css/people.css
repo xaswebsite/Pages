@@ -62,8 +62,9 @@ section {
 
   .president {
     margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); */
     gap: 2rem;
 
     @include mQ(51rem) {
@@ -72,8 +73,9 @@ section {
   }
     .secretariat {
       margin-top: 4rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+      display: flex;
+    flex-wrap: wrap;
+      /* grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); */
       gap: 2rem;
   
       @include mQ(51rem) {
@@ -82,8 +84,10 @@ section {
     }
       .ccms {
         margin-top: 4rem;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+        display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+       /* grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); */
         gap: 2rem;
     
         @include mQ(51rem) {
@@ -92,8 +96,10 @@ section {
       }
     .webdevteam {
       margin-top: 4rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+      display: flex;
+	justify-content: center;
+      flex-wrap: wrap;
+      /* grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); */
       gap: 2rem;
       
   
@@ -106,6 +112,7 @@ section {
     .card {
       position: relative;
       text-align: left;
+      flex: 1;
 
       .social-icon {
         background: #111;
@@ -192,6 +199,16 @@ section {
         }
       }
     }
+  }
+
+  .ccms .card {
+	  max-width: 16rem;
+	  min-width: 16rem;
+  }
+
+  .webdevteam .card {
+	  max-width: 16rem;
+	  min-width: 16rem;
   }
 
 
