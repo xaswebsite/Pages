@@ -22,6 +22,8 @@
 	font-size: 30px;
 	border-radius: 5px;
 	position: relative;
+	z-index: 1000001;
+	color:white;
 }
 
 .slideout-menu-toggle-icon span {

@@ -213,7 +213,14 @@ dycalendar.draw({
 // Calender Info
 
 let cal = document.getElementById('dycalendar');
-let activeCalInfo = null;
+
+const todayDate = new Date();
+const todayId = todayDate.getDate()+'-'+todayDate.toLocaleString('default', {month: 'long'})+'-'+todayDate.getFullYear();
+const today = document.getElementById(todayId);
+
+let activeCalInfo = today;
+
+	console.log(today);
 
 // FIXME: the toUpperCase is probably not doing anything but idk the spec.
 cal.addEventListener('mouseover', (eve) => {
@@ -228,7 +235,7 @@ cal.addEventListener('mouseover', (eve) => {
 		let doc = document.getElementById(id);
 
 		if(doc == null)
-			doc = document.getElementById('no-event-scheduled');
+			doc = today || document.getElementById('no-event-scheduled');
 
 		doc.classList.remove('is-hidden');
 
@@ -240,23 +247,19 @@ cal.addEventListener('mouseout', (eve) => {
 	if(activeCalInfo)
 		activeCalInfo.classList.add('is-hidden');
 
-	activeCalInfo = document.getElementById('no-event-scheduled');
+	console.log(activeCalInfo, today);
+	activeCalInfo = today || document.getElementById('no-event-scheduled');
 	activeCalInfo.classList.remove('is-hidden');
 })
 
 function initCalInfo() {
 	const calinfo = document.querySelector('.calendarinfo');
 	Array.from(calinfo.children).forEach((e) => e.classList.add('is-hidden'))
-	activeCalInfo = document.getElementById('no-event-scheduled');
+
+	activeCalInfo = today || document.getElementById('no-event-scheduled');
 	activeCalInfo.classList.remove('is-hidden');
 }
 
 initCalInfo()
-
-function hideLoader() {
-	$('#universe').fadeOut('slow');
-}
-
-window.addEventListener('load', hideLoader);
 
 })(jQuery);

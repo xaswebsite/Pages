@@ -16,14 +16,12 @@ function MenuInitialize() {
 
 	menu_list.addEventListener('transitionend', (t) => {
 		if(!this.isVisible && t.propertyName == 'opacity') {
-			console.log(t)
 			slideout.style.width= '0px';
 		}
 	});
 
 	menu_list.addEventListener('transitionstart', (t) => {
 		if(this.isVisible && t.propertyName == 'opacity') {
-			console.log(t)
 			slideout.style.width = this.maxWidth+'px';
 		}
 	});

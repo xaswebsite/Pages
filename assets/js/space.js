@@ -65,12 +65,13 @@ const SpaceBackgroundState = {
 		
 		float t = pow(smt.x + smt.y, 2.) * 0.3;
 
-    		vec4 fromTex = texture(Background, suv);
+    		vec4 fromTex = mix(vec4(10./255., 25./255., 51./255., 1.), texture(Background, suv), 1.);
 
-		// vec4 col = mix(fromTex, vec4(0.5, 0.5, 0.5, 1.0), t) * (inte + 1.);
-		vec4 mask = mix(vec4(0., 0., 0., 1.), vec4(1., 1., 1., 1.0), len2 / (mass * sqrt(dw) * 0.5 * scale));
-		
-		FragColor = min(fromTex, mask);
+		vec4 col = fromTex;//mix(fromTex, vec4(0.5, 0.5, 0.5, 1.0), t) * (inte + 1.);
+		vec4 mask = mix(vec4(10./255., 25./255., 51./255., 1.)* 2., vec4(1., 1., 1., 1.), len2 / (mass * sqrt(dw) * 0.5 * scale));
+	
+		FragColor = min(col, mask);
+		FragColor.w = 1.;
 	}`,
 
 	program: 0,
